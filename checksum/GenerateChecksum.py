@@ -1,12 +1,26 @@
-__author__ = 'Dean'
 
 import hashlib
+import Errors
 
 
 def generate_checksum(hash_method, object_being_hashed):
 
+    if hash_method == "md5":
+        hasher = hashlib.md5()
+    elif hash_method == "sha1":
+        hasher = hashlib.sha1()
+    elif hash_method == "sha224":
+        hasher = hashlib.sha224()
+    elif hash_method == "sha256":
+        hasher = hashlib.sha256()
+    elif hash_method == "sha384":
+        hasher = hashlib.sha384()
+    elif hash_method == "sha512":
+        hasher = hashlib.sha512()
+    else:
+        raise Errors.HashError(hash_method)
+
     blocksize = 65536
-    hasher = hashlib.sha1()
 
     try:
 
@@ -20,7 +34,7 @@ def generate_checksum(hash_method, object_being_hashed):
             return hasher.hexdigest()
 
     except IOError:
-        return "File non-existant"
+        return "File non-existent"
 
 
 
