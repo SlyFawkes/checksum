@@ -48,5 +48,3 @@ def get_file():
     Tk().withdraw()
     filename = askopenfilename(initialdir="C:/Users/deanw/Downloads/")
     return filename
-
-
