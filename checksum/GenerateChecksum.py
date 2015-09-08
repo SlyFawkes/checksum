@@ -4,24 +4,27 @@ from tkFileDialog import askopenfilename
 import Errors
 
 
+available_hashes = ["md5", "sha1", "sha224", "sha256", "sha384", "sha512"]
+
+
 def generate_checksum(hash_method, object_being_hashed):
 
-    if hash_method == "md5":
+    if hash_method == available_hashes[0]:
         hasher = hashlib.md5()
 
-    elif hash_method == "sha1":
+    elif hash_method == available_hashes[1]:
         hasher = hashlib.sha1()
 
-    elif hash_method == "sha224":
+    elif hash_method == available_hashes[2]:
         hasher = hashlib.sha224()
 
-    elif hash_method == "sha256":
+    elif hash_method == available_hashes[3]:
         hasher = hashlib.sha256()
 
-    elif hash_method == "sha384":
+    elif hash_method == available_hashes[4]:
         hasher = hashlib.sha384()
 
-    elif hash_method == "sha512":
+    elif hash_method == available_hashes[5]:
         hasher = hashlib.sha512()
 
     else:
