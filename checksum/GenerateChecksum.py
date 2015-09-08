@@ -48,3 +48,10 @@ def get_file():
     Tk().withdraw()
     filename = askopenfilename(initialdir="C:/Users/deanw/Downloads/")
     return filename
+
+
+def check_equal(objects_hash, actual_hash):
+    if objects_hash == actual_hash:
+        return True
+    else:
+        return False
