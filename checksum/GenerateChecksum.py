@@ -3,7 +3,7 @@ from Tkinter import Tk
 from tkFileDialog import askopenfilename
 import Errors
 
-
+#TODO change to dict with methods as value
 available_hashes = ["md5", "sha1", "sha224", "sha256", "sha384", "sha512"]
 
 
