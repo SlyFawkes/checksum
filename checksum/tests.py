@@ -5,6 +5,7 @@ import Errors
 
 # TODO redo tests so they do not require user input
 
+
 class ChecksumTests(unittest.TestCase):
 
     def test_sums_equal(self):
